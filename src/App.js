@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import CheckboxList from "./components/CheckboxList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#F5F5F5]">
+      <div className="bg-[#000080] text-white">
+        <div className="2xl:container sm:mx-20 mx-10">
+          <h1 className="py-5 font-bold text-xl">
+            SEO Best Practice Guideline
+          </h1>
+        </div>
+      </div>
+      <div className="2xl:container sm:mx-20 mx-10 py-10">
+        <CheckboxList />
+      </div>
     </div>
   );
 }
