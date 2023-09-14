@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Checkbox from "./Checkbox";
 
 function CheckboxList() {
@@ -57,6 +57,28 @@ function CheckboxList() {
 
   const [completedTasks, setCompletedTasks] = useState([]);
   const [completedTasksVisible, setCompletedTasksVisible] = useState(true);
+
+  // Load saved data from localStorage when the component mounts
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+    const savedCompletedTasks = JSON.parse(
+      localStorage.getItem("completedTasks")
+    );
+
+    if (savedTasks) {
+      setTasks(savedTasks);
+    }
+
+    if (savedCompletedTasks) {
+      setCompletedTasks(savedCompletedTasks);
+    }
+  }, []);
+
+  // Save data to localStorage whenever tasks or completedTasks change
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
+  }, [tasks, completedTasks]);
 
   const handleToggle = (label) => {
     const updatedTasks = tasks.map((task) => {
