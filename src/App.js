@@ -12,7 +12,7 @@ function App() {
           </h1>
         </div>
       </div>
-      <div className="sm:mx-20 mx-10 py-10">
+      <div className="sm:mx-20 mx-10 pb-10">
         <CheckboxList />
       </div>
     </div>

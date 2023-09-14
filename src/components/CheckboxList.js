@@ -148,7 +148,7 @@ function CheckboxList() {
     <div>
       {uncheckedTasks.length > 0 && (
         <>
-          <h2 className="text-[#000080] font-bold text-xl flex items-center ">
+          <h2 className="text-[#000080]  font-bold text-xl flex items-center ">
             <span className="pr-3">
               <img src="./todo-list.png" alt="Image" className="w-6 h-6" />
             </span>
