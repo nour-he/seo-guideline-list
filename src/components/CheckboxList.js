@@ -56,6 +56,7 @@ function CheckboxList() {
   ]);
 
   const [completedTasks, setCompletedTasks] = useState([]);
+  const [completedTasksVisible, setCompletedTasksVisible] = useState(true);
 
   const handleToggle = (label) => {
     const updatedTasks = tasks.map((task) => {
@@ -83,7 +84,15 @@ function CheckboxList() {
     <div>
       {uncheckedTasks.length > 0 && (
         <>
-          <h2 className="text-black">ToDo List:</h2>
+          <h2 className="text-[#000080] font-bold text-xl flex items-center ">
+            <span className="pr-3">
+              <img src="./todo-list.png" alt="Image" className="w-6 h-6" />
+            </span>
+            ToDo List{" "}
+            <span className="pl-3 text-[#90CAF9] font-normal">
+              {uncheckedTasks.length}
+            </span>
+          </h2>
           {uncheckedTasks.map((task) => (
             <Checkbox
               key={task.label}
@@ -96,15 +105,61 @@ function CheckboxList() {
       )}
       {completedTasks.length > 0 && (
         <>
-          <h2 className="text-black">Completed:</h2>
-          {completedTasks.map((completedTask) => (
-            <Checkbox
-              key={completedTask}
-              label={completedTask}
-              isChecked={true}
-              onToggle={handleToggle}
-            />
-          ))}
+          <h2 className="text-black flex items-center">
+            <span
+              className="pr-3"
+              onClick={() => setCompletedTasksVisible(!completedTasksVisible)}
+            >
+              {completedTasksVisible ? (
+                <svg
+                  class="w-3 h-3 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 8"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  class="w-3 h-3 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 8 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                  />
+                </svg>
+              )}
+            </span>{" "}
+            Completed {completedTasks.length}
+          </h2>
+          {completedTasksVisible && (
+            <>
+              {completedTasks.map((completedTask) => (
+                <div key={completedTask}>
+                  {/* Render the checkbox and label */}
+                  <Checkbox
+                    label={completedTask}
+                    isChecked={true}
+                    onToggle={handleToggle}
+                  />
+                </div>
+              ))}
+            </>
+          )}
         </>
       )}
     </div>

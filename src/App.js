@@ -4,15 +4,15 @@ import CheckboxList from "./components/CheckboxList";
 
 function App() {
   return (
-    <div className="bg-[#F5F5F5]">
+    <div>
       <div className="bg-[#000080] text-white">
-        <div className="2xl:container sm:mx-20 mx-10">
+        <div className="sm:mx-20 mx-10">
           <h1 className="py-5 font-bold text-xl">
             SEO Best Practice Guideline
           </h1>
         </div>
       </div>
-      <div className="2xl:container sm:mx-20 mx-10 py-10">
+      <div className="sm:mx-20 mx-10 py-10">
         <CheckboxList />
       </div>
     </div>
