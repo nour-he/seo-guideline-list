@@ -11,25 +11,61 @@ function CheckboxList() {
       isChecked: false,
     },
     { label: "Use Optimized Images", isChecked: false },
-    { label: "Keep it under 125 characters", isChecked: false },
-    { label: "Include one main keyword for context", isChecked: false },
-    { label: "Don’t include “image of” or “picture of”", isChecked: false },
+    {
+      label:
+        "Provide Alt Text for all the Images: Keep it under 125 characters",
+      isChecked: false,
+    },
+    {
+      label:
+        "Provide Alt Text for all the Images: Include one main keyword for context",
+      isChecked: false,
+    },
+    {
+      label:
+        "Provide Alt Text for all the Images: Don’t include “image of” or “picture of”",
+      isChecked: false,
+    },
     { label: "Lazy-Load the Images", isChecked: false },
     { label: "Build an Internal Linking Structure", isChecked: false },
     {
-      label: "Use headers and subheadings. (Only 1 H1 per page)",
+      label:
+        " Improve User Experience: Use headers and subheadings. (Only 1 H1 per page)",
       isChecked: false,
     },
-    { label: "Make your content visually appealing", isChecked: false },
-    { label: "Avoid using intrusive pop-ups", isChecked: false },
-    { label: "Use white space", isChecked: false },
-    { label: "Make your site mobile-friendly.", isChecked: false },
-    { label: "Website responsiveness", isChecked: false },
-    { label: "Never stretch images", isChecked: false },
-    { label: "Use short URLs", isChecked: false },
-    { label: "Include your target keyword", isChecked: false },
     {
-      label: "Include categories or subfolders if necessary",
+      label: " Improve User Experience: Make your content visually appealing",
+      isChecked: false,
+    },
+    {
+      label: " Improve User Experience: Avoid using intrusive pop-ups",
+      isChecked: false,
+    },
+    { label: " Improve User Experience: Use white space", isChecked: false },
+    {
+      label: " Improve User Experience: Make your site mobile-friendly.",
+      isChecked: false,
+    },
+    {
+      label: " Improve User Experience: Website responsiveness",
+      isChecked: false,
+    },
+    {
+      label: " Improve User Experience: Add some animations for icons",
+      isChecked: false,
+    },
+    {
+      label: " Improve User Experience: Never stretch images",
+      isChecked: false,
+    },
+    { label: "Make Your URLs SEO-Friendly: Use short URLs", isChecked: false },
+    {
+      label: "Make Your URLs SEO-Friendly: Include your target keyword",
+      isChecked: false,
+    },
+    {
+      label:
+        "Make Your URLs SEO-Friendly: Include categories or subfolders if necessary",
       isChecked: false,
     },
     { label: "Include xml Sitemap and robot files", isChecked: false },
@@ -44,13 +80,19 @@ function CheckboxList() {
         "www redirect: The www and non-www versions of the URL should redirected to the same site",
       isChecked: false,
     },
-    { label: "Minify and compress network payloads.", isChecked: false },
     {
-      label: "Use WebP instead of JPEG or PNG for the images.",
+      label:
+        "Optimize requests to be as small as possible: Minify and compress network payloads.",
       isChecked: false,
     },
     {
-      label: "Set the compression level of JPEG images to 75",
+      label:
+        "Optimize requests to be as small as possible: Use WebP instead of JPEG or PNG for the images.",
+      isChecked: false,
+    },
+    {
+      label:
+        "Optimize requests to be as small as possible: Set the compression level of JPEG images to 75",
       isChecked: false,
     },
   ]);
